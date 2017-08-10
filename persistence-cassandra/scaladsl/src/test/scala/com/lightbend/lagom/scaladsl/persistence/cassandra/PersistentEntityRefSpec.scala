@@ -81,7 +81,8 @@ class PersistentEntityRefSpec extends WordSpecLike with Matchers with BeforeAndA
     reg
   }
 
-  implicit val patience = PatienceConfig(5.seconds, 100.millis)
+  override implicit val patienceConfig = PatienceConfig(5.seconds, 150.millis)
+  
 
   "The Cassandra persistence backend" should {
 
